@@ -6,12 +6,12 @@
 }
 
 .hero__section {
-  background: url(/images/heroSectionBackground.jpg);
+  background: url(images/heroSectionBackground.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  min-height: 60vh;
+  min-height: 65vh;
 }
 
 .navbar {
@@ -19,7 +19,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 48px;
-  background: #bd2f2f;
 }
 
 .navbar a {
@@ -45,12 +44,61 @@
   justify-content: center;
 }
 
+.hero__section_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(65vh - 60px);
+  gap: 10px;
+}
+
+.hero__section_logo {
+  font-weight: bold;
+  font-style: italic;
+  text-transform: capitalize;
+  padding-top: 30px;
+}
+
+.hero__section_title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 10px 0 30px 0;
+}
+
+.hero__section_input_container {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  gap: 10px;
+  width: 55%;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_container_location,
+.input__container_search {
+  border: none;
+  padding: 5px;
+  outline: none;
+}
+
+.input__container_search {
+  width: 66%;
+  border-left: solid 2px #e0e0e0;
+}
+
 @media only screen and (min-width: 600px) {
   .navbar__menu_container .user__icon {
     display: none;
   }
 }
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 680px) {
   .navbar {
     padding: 16px;
     font-size: small;
@@ -61,6 +109,36 @@
   }
 
   .hero__section {
-    min-height: 80vh;
+    min-height: 75vh;
+  }
+
+  .hero__section_input_container {
+    flex-direction: column;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .input_container_location,
+  .input__container_search {
+    padding: 15px;
+    gap: 10px;
+    border-radius: 10px;
+    width: 90%;
+  }
+
+  .hero__section_logo {
+    font-size: 5rem;
+  }
+  .hero__section_title {
+    font-size: 26px;
+  }
+  .hero__section_container {
+    height: calc(75vh - 60px);
+  }
+
+  .input_container_search {
+    border-left: none;
   }
 }
