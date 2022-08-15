@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-transform: capitalize;
   font-family: "Poppins", sans-serif;
 }
 
@@ -92,6 +93,137 @@
   border-left: solid 2px #e0e0e0;
 }
 
+.container {
+  margin: 3rem auto;
+  width: 100%;
+}
+
+.we__offer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.we__offer .card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  transition: all 300ms ease-in-out;
+}
+
+.we__offer .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.we__offer .card h2 {
+  padding: 10px 10px 0px 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.we__offer .card p {
+  padding: 0 10px 10px 10px;
+  font-size: 13px;
+}
+
+.we__offer .card:hover {
+  transform: scale(1.05);
+}
+
+.collections h1 {
+  font-weight: 400;
+}
+
+.collections {
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.collections .sub__heading_container {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.sub__heading_container span:nth-child(2) {
+  color: #ff7e8b;
+  font-size: 15px;
+}
+
+.collections_card_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.collections_card_container .card {
+  height: 300px;
+  min-width: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+
+.card1 {
+  background-image: url("images/collection1.jpg");
+}
+
+.card2 {
+  background-image: url("images/collection2.jpg");
+}
+
+.card3 {
+  background-image: url("images/collection3.jpg");
+}
+
+.card4 {
+  background-image: url("images/collection4.avif");
+}
+
+.overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.05) 85%
+  );
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.collections_card_container .card .content {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  color: #fff;
+  font-weight: 100;
+  padding: 12px 16px;
+}
+
+.collections_card_container .card:hover {
+  transform: scale(1.05);
+}
+
 @media only screen and (min-width: 600px) {
   .navbar__menu_container .user__icon {
     display: none;
@@ -140,5 +272,9 @@
 
   .input_container_search {
     border-left: none;
+  }
+
+  .collections {
+    width: 90%;
   }
 }
